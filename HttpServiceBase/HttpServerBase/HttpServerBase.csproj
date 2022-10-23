@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <Title>Simple Function HTTP Server Base</Title>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>bee-eee-libs-http-server-base</PackageId>
+    <PackageId>BeeEeeLibs.HttpServerBase</PackageId>
     <Authors>Brian Dickey</Authors>
     <Description>The base for a simple HTTP server.  This is based on the Microsoft ASP.Net Kestrel HTTP server</Description>
     <Copyright>(c) 2022</Copyright>

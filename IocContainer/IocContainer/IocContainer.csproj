@@ -16,7 +16,7 @@
     <PackageTags>IOC Container</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageId>bee-eee-libs-ioc-container</PackageId>
+    <PackageId>BeeEeeLibs.IocContainer</PackageId>
   </PropertyGroup>
 
 </Project>

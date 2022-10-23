@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>BeeEee.Mysql</RootNamespace>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>bee-eee-libs-mysql</PackageId>
+    <PackageId>BeeEeeLibs.Mysql</PackageId>
     <Title>BeeEeeLibs MySQL</Title>
     <Authors>Brian Dickey</Authors>
     <Description>Some helpers to make using mysql easier.</Description>
