@@ -16,6 +16,7 @@
     <PackageTags>HTTP;ASP.NET;functional</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
