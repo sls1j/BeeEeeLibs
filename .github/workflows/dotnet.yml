@@ -24,13 +24,13 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Show Environment
+      run: ls -l
     - name: Publish BeeEeeLibs.HttpServerBase
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
         PROJECT_FILE_PATH: src/HttpServerBase/HttpServerBase/HttpServerBase.csproj"
-        NUGET_KEY: $${{secrets.NUGET_API_KEY}}
-    - name: Show Environment
-      run: ls -l
+        NUGET_KEY: $${{secrets.NUGET_API_KEY}}   
     - name: Publish BeeEeeLibs.MySql
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
