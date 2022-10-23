@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>Simple Function HTTP Server Base</Title>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>bee-eee-libs-http-server-base</PackageId>
+    <Authors>Brian Dickey</Authors>
+    <Description>The base for a simple HTTP server.  This is based on the Microsoft ASP.Net Kestrel HTTP server</Description>
+    <Copyright>(c) 2022</Copyright>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>HTTP;ASP.NET;functional</PackageTags>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	<FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+</Project>

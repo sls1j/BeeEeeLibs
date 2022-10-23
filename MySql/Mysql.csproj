@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>BeeEee.Mysql</RootNamespace>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>bee-eee-libs-mysql</PackageId>
+    <Title>BeeEeeLibs MySQL</Title>
+    <Authors>Brian Dickey</Authors>
+    <Description>Some helpers to make using mysql easier.</Description>
+    <Copyright>(c) 2022</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.2.0" />
+    <PackageReference Include="MySqlConnector" Version="2.1.13" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.CodeDom" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
