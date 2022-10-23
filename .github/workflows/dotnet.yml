@@ -31,7 +31,7 @@ jobs:
     - name: Publish BeeEeeLibs.HttpServerBase
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
-        PROJECT_FILE_PATH: src/HttpServerBase/HttpServerBase/HttpServerBase.csproj"
+        PROJECT_FILE_PATH: HttpServerBase/HttpServerBase/HttpServerBase.csproj
         NUGET_KEY: $${{secrets.NUGET_API_KEY}}   
     - name: Publish BeeEeeLibs.MySql
       uses: brandedoutcast/publish-nuget@v2.5.2
