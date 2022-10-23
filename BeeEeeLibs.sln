@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IocContainer", "IocContaine
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mysql", "Mysql", "{DE0B774D-98C7-4394-AB26-3C5C2F7EC5AB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HttpServiceBase", "HttpServiceBase", "{80590710-45A2-4036-AD0F-693A39123E9E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HttpServerBase", "HttpServerBase", "{80590710-45A2-4036-AD0F-693A39123E9E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpServerBase", "HttpServiceBase\HttpServerBase\HttpServerBase.csproj", "{ABA5B6D9-052A-4D0A-8C8D-4C3A79904717}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpServerBase", "HttpServerBase\HttpServerBase\HttpServerBase.csproj", "{ABA5B6D9-052A-4D0A-8C8D-4C3A79904717}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleServer", "HttpServiceBase\ExampleServer\ExampleServer.csproj", "{76C72812-C867-4F64-A4BD-F61A84C07E33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleServer", "HttpServerBase\ExampleServer\ExampleServer.csproj", "{76C72812-C867-4F64-A4BD-F61A84C07E33}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IocContainer", "IocContainer\IocContainer\IocContainer.csproj", "{C22604D1-9C32-4EA7-8CDC-240D3B8E4EF3}"
 EndProject
