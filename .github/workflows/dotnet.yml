@@ -29,7 +29,8 @@ jobs:
       with:
         PROJECT_FILE_PATH: src/HttpServerBase/HttpServerBase/HttpServerBase.csproj"
         NUGET_KEY: $${{secrets.NUGET_API_KEY}}
-    
+    - name: Show Environment
+      run: ls -l
     - name: Publish BeeEeeLibs.MySql
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
