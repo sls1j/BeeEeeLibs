@@ -24,8 +24,6 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Show Environment      
-      run: find .
     - name: Publish BeeEeeLibs.HttpServerBase
       run: dotnet nuget push "HttpServerBase/HttpServerBase/bin/Release/"*.nupkg -k $${{secrets.NUGET_API_KEY}} -s "https://api.nuget.org/v3/index.json"
     
