@@ -29,13 +29,4 @@ jobs:
     - name: Show Environment      
       run: ls -l
     - name: Publish BeeEeeLibs.HttpServerBase
-      uses: brandedoutcast/publish-nuget@v2.5.2
-      with:
-        PROJECT_FILE_PATH: HttpServerBase/HttpServerBase/HttpServerBase.csproj
-        NUGET_KEY: $${{secrets.NUGET_API_KEY}}   
-    - name: Publish BeeEeeLibs.MySql
-      uses: brandedoutcast/publish-nuget@v2.5.2
-      with:
-        PROJECT_FILE_PATH: MySql/MySql.csproj
-        NUGET_KEY: $${{secrets.NUGET_API_KEY}}
-    
+      run: dotnet nuget push "HttpServerBase/HttpServerBase/bin/Release/*.nupkg" -k $${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
