@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+	<RootNamespace>BeeEeeLibs.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Title>BeeEeeLibs.$(MSBuildProjectName.Replace(" ", "_"))</Title>
+	<Company>Brian Dickey</Company>
+	<Description>Threading utilities</Description>
+	<Copyright>(c) 2022</Copyright>
+	<PackageProjectUrl></PackageProjectUrl>
+	<RepositoryUrl></RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageTags>Threading</PackageTags>
+	<IncludeSymbols>True</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<PackageId>BeeEeeLibs.$(MSBuildProjectName.Replace(" ", "_"))</PackageId>
+	<Version>1.0.0</Version>
+  </PropertyGroup>
+
+</Project>

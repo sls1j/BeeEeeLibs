@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IocContainterTests", "IocCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mysql", "MySql\Mysql.csproj", "{E1197BF7-36CC-4DE6-A8C3-6471B227A17E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{E02FDEFD-2C9B-48C3-89FB-7109CABE804A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E1197BF7-36CC-4DE6-A8C3-6471B227A17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1197BF7-36CC-4DE6-A8C3-6471B227A17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1197BF7-36CC-4DE6-A8C3-6471B227A17E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02FDEFD-2C9B-48C3-89FB-7109CABE804A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02FDEFD-2C9B-48C3-89FB-7109CABE804A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02FDEFD-2C9B-48C3-89FB-7109CABE804A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02FDEFD-2C9B-48C3-89FB-7109CABE804A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
