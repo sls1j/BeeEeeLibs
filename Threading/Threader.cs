@@ -34,12 +34,20 @@
             {
                 while (isRunning())
                 {
-                    thread();
+                    try
+                    {
+                        thread();
+                    }
+                    catch(Exception ex)
+                    {
+                        if (onError != null)
+                            onError(ex);
+                    }
                 }
             }, threadStarted, threadEnded, onError);
         }
 
-        public static void Interval(string name, Func<bool> isRunning, TimeSpan interval, Func<Action> threadInit, Action? threadStarted = null, Action? threadEnded = null, Action<Exception>? onError = null, Func<DateTime> getUtc = null)
+        public static void Interval(string name, Func<bool> isRunning, TimeSpan interval, Func<Action> threadInit, Action? threadStarted = null, Action? threadEnded = null, Action<Exception>? onError = null, Func<DateTime>? getUtc = null, int loopDelayMili = 250 )
         {
             Action thread = threadInit();
             getUtc = getUtc ?? (() => DateTime.UtcNow);
@@ -48,13 +56,24 @@
             {
                 while (isRunning())
                 {
-                    DateTime now = getUtc();
-                    if (expire <= now)
+                    try
                     {
-                        thread();
-                        expire = now.Add(interval);
+                        DateTime now = getUtc();
+                        if (expire <= now)
+                        {
+                            thread();
+                            expire = now.Add(interval);
+                        }
+                        
+                        if (loopDelayMili > 0)
+                            Thread.Sleep(loopDelayMili);
                     }
-                    Thread.Sleep(250);
+                    catch(Exception ex)
+                    {
+                        if (onError != null)
+                            onError(ex);
+
+                    }
                 }
             }, threadStarted, threadEnded, onError);
         }
