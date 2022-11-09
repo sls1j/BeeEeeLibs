@@ -27,11 +27,11 @@
         }
 
         public static void Loop(string name, Func<bool> isRunning, Func<Action> threadInit, Action? threadStarted = null, Action? threadEnded = null, Action<Exception>? onError = null)
-        {
-            Action thread = threadInit();
-
+        {           
             Run(name, () =>
             {
+                Action thread = threadInit();
+
                 while (isRunning())
                 {
                     try
@@ -48,12 +48,13 @@
         }
 
         public static void Interval(string name, Func<bool> isRunning, TimeSpan interval, Func<Action> threadInit, Action? threadStarted = null, Action? threadEnded = null, Action<Exception>? onError = null, Func<DateTime>? getUtc = null, int loopDelayMili = 250 )
-        {
-            Action thread = threadInit();
+        {            
             getUtc = getUtc ?? (() => DateTime.UtcNow);
             DateTime expire = getUtc().Add(interval);
             Run(name, () =>
             {
+                Action thread = threadInit();
+
                 while (isRunning())
                 {
                     try
