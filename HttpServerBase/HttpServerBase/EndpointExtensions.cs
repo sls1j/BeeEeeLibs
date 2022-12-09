@@ -8,41 +8,41 @@ using System.Threading.Tasks;
 
 namespace BeeEeeLibs.HttpServerBase
 {
-  public static class EndPointExtensions
-  {
-    private static RequestDelegate WrapConsole(RequestDelegate callback)
+    public static class EndPointExtensions
     {
-      RequestDelegate callback2 = async ctx =>
-      {
-        Console.WriteLine($"{ctx.Request.Method} {ctx.Request.Path.Value}");
-        await callback(ctx);
-      };
+        internal static RequestDelegate WrapConsole(RequestDelegate callback)
+        {
+            RequestDelegate callback2 = async ctx =>
+            {
+                Console.WriteLine($"{ctx.Request.Method} {ctx.Request.Path.Value}");
+                await callback(ctx);
+            };
 
-      return callback2;
-    }
+            return callback2;
+        }
 
-    public static List<RegisterDelegate> Post(this List<RegisterDelegate> endPoints, string pattern, RequestDelegate callback)
-    {     
-      endPoints.Add(builder => builder.MapPost(pattern, WrapConsole(callback)));
-      return endPoints;
-    }
+        public static List<RegisterDelegate> Post(this List<RegisterDelegate> endPoints, string pattern, RequestDelegate callback)
+        {
+            endPoints.Add(builder => builder.MapPost(pattern, WrapConsole(callback)));
+            return endPoints;
+        }
 
-    public static List<RegisterDelegate> Get(this List<RegisterDelegate> endPoints, string pattern, RequestDelegate callback)
-    {
-      endPoints.Add(builder => builder.MapGet(pattern, WrapConsole(callback)));
-      return endPoints;
-    }
+        public static List<RegisterDelegate> Get(this List<RegisterDelegate> endPoints, string pattern, RequestDelegate callback)
+        {
+            endPoints.Add(builder => builder.MapGet(pattern, WrapConsole(callback)));
+            return endPoints;
+        }
 
-    public static List<RegisterDelegate> Put(this List<RegisterDelegate> endPoints, string pattern, RequestDelegate callback)
-    {
-      endPoints.Add(builder => builder.MapPut(pattern, WrapConsole(callback)));
-      return endPoints;
-    }
+        public static List<RegisterDelegate> Put(this List<RegisterDelegate> endPoints, string pattern, RequestDelegate callback)
+        {
+            endPoints.Add(builder => builder.MapPut(pattern, WrapConsole(callback)));
+            return endPoints;
+        }
 
-    public static List<RegisterDelegate> Delete(this List<RegisterDelegate> endPoints, string pattern, RequestDelegate callback)
-    {
-      endPoints.Add(builder => builder.MapDelete(pattern, WrapConsole(callback)));
-      return endPoints;
+        public static List<RegisterDelegate> Delete(this List<RegisterDelegate> endPoints, string pattern, RequestDelegate callback)
+        {
+            endPoints.Add(builder => builder.MapDelete(pattern, WrapConsole(callback)));
+            return endPoints;
+        }        
     }
-  }
 }
