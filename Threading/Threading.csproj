@@ -17,7 +17,7 @@
 	<IncludeSymbols>True</IncludeSymbols>
 	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	<PackageId>BeeEeeLibs.$(MSBuildProjectName.Replace(" ", "_"))</PackageId>
-	<Version>1.0.2</Version>
+	<Version>1.0.3</Version>
 	<PackageLicenseExpression>  MIT</PackageLicenseExpression>
   </PropertyGroup>
 
