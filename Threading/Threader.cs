@@ -5,7 +5,7 @@
         public static void Run(string name, Action thread, Action? threadStarted = null, Action? threadEnded = null, Action<Exception>? onError = null)
         {
             Thread t = new Thread(o =>
-            {
+            {                
                 try
                 {
                     if (threadStarted != null)
@@ -23,6 +23,7 @@
                 }
             });
 
+            t.Name = name;
             t.Start();            
         }
 
